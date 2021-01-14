@@ -1,0 +1,26 @@
+body {
+    background-image: url("../pictures/background.jpg");
+    background-size: cover;
+}
+form {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+}
+form, div {
+    border: 2px;
+    border-collapse: collapse;
+    border-style: outset;
+}
+div {
+    padding: 15px;
+    text-align:center;
+}
+p {
+    color: black;
+    text-shadow: 3px 3px 5px white;
+}
+input {
+    border: 1px solid black;
+}
