@@ -2,9 +2,10 @@
 
 {%block head%}
 <title>Home</title>
+<link rel = "stylesheet" href = "{{ url_for('static', filename = 'css/home.css') }}">
 {%endblock%}
 
 {%block body%}
 <h1>WELCOME</h1>
-<button type = "button">Home</button>
+<button type = "button" class = "button button1">Home</button>
 {%endblock%}
