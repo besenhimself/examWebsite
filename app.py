@@ -4,7 +4,11 @@ from flask_bootstrap import Bootstrap
 app = Flask(__name__)
 Bootstrap(app)
 
-@app.route('/', methods = ['POST', 'GET'])
+@app.route('/')
+def transfer():
+    return redirect('login')
+
+@app.route('/login', methods = ['POST', 'GET'])
 def login():
     if request.method == 'POST':
         user = request.form['user']
