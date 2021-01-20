@@ -1,17 +1,27 @@
 {%extends 'base.html'%}
 
 {%block head%}
-<title>Login</title>
+<title>Test Platform</title>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <link rel ="stylesheet" href = "{{ url_for('static', filename = 'css/main.css') }}">
 {%endblock%}
 
 {%block body%}
-<form action = "/" method = "POST" style = "background-image: linear-gradient(grey, white)">
-    <div>
-        <p>Късмет на теста!</p>
-        <p><input type = "text" name = "user" id = "user" required placeholder = "Username"></p>
-        <p><input type = "password" name = "pass" id = "pass" required placeholder = "Password"></p>
-        <p1><input type = "submit" value = "Login"></p1>
+<form action = "/" method = "POST">
+    <div class = "login">
+        <h1>Login</h1>
+
+        <div class = "text">
+            <i class="fas fa-users"></i>
+            <input type = "text" name = "user" id = "user" required placeholder = "Username">
+        </div>
+
+        <div class = "text">
+            <i class="fas fa-key"></i>
+            <input type = "password" name = "pass" id = "pass" required placeholder = "Password">
+        </div>
+
+        <input class = "button" type = "submit" value = "Login">
     </div>
 </form>
 {%endblock%}
