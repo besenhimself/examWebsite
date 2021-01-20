@@ -1,11 +1,9 @@
 from flask import Flask, render_template, url_for, redirect, request
-from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
-Bootstrap(app)
 
 @app.route('/')
-def transfer():
+def index():
     return redirect('login')
 
 @app.route('/login', methods = ['POST', 'GET'])

@@ -1,12 +1,12 @@
-{%extends 'base.html'%}
+{% extends 'base.html' %}
 
-{%block head%}
-<title>Test Platform</title>
+{% block head %}
+<title>Exam Platform</title>
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <link rel ="stylesheet" href = "{{ url_for('static', filename = 'css/main.css') }}">
-{%endblock%}
+{% endblock %}
 
-{%block body%}
+{% block body %}
 <form action = "/login" method = "POST">
     <div class = "login">
         <h1>Login</h1>
@@ -24,4 +24,4 @@
         <input class = "button" type = "submit" value = "Login">
     </div>
 </form>
-{%endblock%}
+{% endblock %}

@@ -44,6 +44,7 @@ body {
 }
 
 .text input {
+    color: white;
     border: none;
     outline: none;
     background: none;
