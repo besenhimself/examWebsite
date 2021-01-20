@@ -10,15 +10,15 @@
 <form action = "/login" method = "POST">
     <div class = "login">
         <h1>Login</h1>
-
+        {{ form.hidden_tag() }}
         <div class = "text">
             <i class="fas fa-users"></i>
-            <input type = "text" name = "user" id = "user" required placeholder = "Username">
+            {{ form.username(placeholder = "Username") }}
         </div>
 
         <div class = "text">
             <i class="fas fa-key"></i>
-            <input type = "password" name = "pass" id = "pass" required placeholder = "Password">
+            {{ form.password(placeholder = "Password") }}
         </div>
 
         <input class = "button" type = "submit" value = "Login">
