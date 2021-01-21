@@ -3,6 +3,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField
 from wtforms.validators import Length, InputRequired
 from flask_sqlalchemy import SQLAlchemy
+from werkzeug.security import check_password_hash
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret'
@@ -29,7 +30,7 @@ def login():
     if form.validate_on_submit():
         user = User.query.filter_by(username = form.username.data).first()
         if user:
-            if user.password == form.password.data:
+            if check_password_hash(user.password, from.password.data):
                 return redirect(url_for('success', name = form.username.data))
 
     return render_template('login.html', form = form)
