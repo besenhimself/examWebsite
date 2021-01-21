@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Test</title>
+<link rel = "stylesheet" href = "{{ url_for('static', filename = 'css/test.css') }}">
+<script src = "{{ url_for('static', filename = 'js/test.js') }}"> </script>
+{% endblock %}
+
+{% block body %}
+<header>
+    <div class="container"> 
+        <h1 class = "logo"></h1>>  
+        <nav class="left">
+            <ul>
+            <li><a href="{{ url_for('success') }}">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            </ul>
+        </nav>
+        <nav class="right">
+            <ul>
+                <li class = "logout"><a href="{{ url_for('logout') }}">LOGOUT</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<h1>Математика</h1>
+<form class="quiz" id="quiz" name="quiz">
+    <p>Име и Фамилия</p>
+    <input id="text" type="text" name="q1">
+    <p>Колко е 1+1?</p>
+    <input type="radio" name="gender" value="male">а) -1<br>
+    <input type="radio" name="gender" value="female">б) 0<br>
+    <input type="radio" name="gender" value="other">в) 3<br>
+</form>
+
+{% endblock %}

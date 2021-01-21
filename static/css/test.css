@@ -6,17 +6,16 @@ body {
 }
 
 p {
-  border-left: 30px solid black;
-  background-color: lightgrey;
-  margin-right: 20px;
-  margin-left: 20px;
-  border-radius: 15px;
+    margin-left: 5px;
 }
 
-.test {
-  margin-top: 20px;
-  text-decoration: none;
-  font-size: xx-large;
+input {
+    margin-left: 5px;
+}
+
+.quiz input {
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .container {
@@ -85,3 +84,7 @@ nav a::before {
 nav a:hover::before {
   width: 100%;
 }
+
+h1 {
+    text-align: center;
+  }

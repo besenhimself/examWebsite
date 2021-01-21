@@ -9,14 +9,37 @@
 <header>
     <div class="container"> 
         <h1 class = "logo"></h1>>  
-        <nav>
+        <nav class="left">
             <ul>
-            <li><a href="#">HOME</a></li>
+            <li><a href="{{ url_for('success') }}">HOME</a></li>
             <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CONTACT</a></li>
-            <li><a href="{{ url_for('logout') }}">LOGOUT</a></li>
+            </ul>
+        </nav>
+        <nav class="right">
+            <ul>
+                <li class = "logout"><a href="{{ url_for('logout') }}">LOGOUT</a></li>
             </ul>
         </nav>
     </div>
 </header>
+<p>
+    <a href = "{{ url_for('test') }}" class="test">Тест по математика</a><br>
+    <br><br>Срок за предаване:  23.01.2021г. 12:00<br>
+    <br>Изготвил: Жанет Абрамович
+</p>
+<p>
+    <a href = "#" class="test">Тест по разработка на софтуер</a><br>
+    <br><br>Срок за предаване:  25.01.2021г. 00:00<br>
+    <br>Изготвил: Стоян Христов
+</p>
+<p>
+    <a href = "#" class="test">Тест по обектно ориентирано програмиране</a><br>
+    <br><br>Срок за предаване:  26.01.2021г. 16:00<br>
+    <br>Изготвил: Марио Бенов
+</p>
+<p>
+    <a href = "#" class="test">Тест по операционни системи</a><br>
+    <br><br>Срок за предаване:  28.01.2021г. 15:00<br>
+    <br>Изготвил: Виктор Китипов
+</p>
 {% endblock %}

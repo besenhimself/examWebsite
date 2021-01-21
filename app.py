@@ -54,5 +54,10 @@ def logout():
     logout_user()
     return redirect(url_for('index'))
 
+@app.route('/test')
+@login_required
+def test():
+    return render_template('test.html')
+
 if __name__ == "__main__":
     app.run(debug = True)
