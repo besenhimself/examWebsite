@@ -10,8 +10,7 @@ def add_account():
     new_user = User(username = name_input, password = hashed_password)
     db.session.add(new_user)
     db.session.commit()
-
-    return 'User: ' + name_input + ' Created!'
+    print('User Created')
 
 
 add_account()
