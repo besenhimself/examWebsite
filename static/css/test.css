@@ -1,8 +1,25 @@
 body {
 	margin: 0;
-	background:white;
+    background: lightsteelblue;
 	font-family: 'Courier New', monospace;
 	font-weight: 800;
+}
+
+form {
+    margin-top: 100px;
+    margin-left: 30px;
+    border-top: 35px solid black;
+    background-color: lightgrey;
+    border-radius: 15px;
+    width: 96%;
+}
+
+.button {
+    border-radius: 15px;
+    background: black;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 p {
@@ -15,7 +32,6 @@ input {
 
 .quiz input {
     font-size: 15px;
-    font-weight: bold;
 }
 
 .container {

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<title>Test</title>
+<title>Maths</title>
 <link rel = "stylesheet" href = "{{ url_for('static', filename = 'css/test.css') }}">
 <script src = "{{ url_for('static', filename = 'js/test.js') }}"> </script>
 {% endblock %}
@@ -24,13 +24,41 @@
     </div>
 </header>
 <h1>Математика</h1>
-<form class="quiz" id="quiz" name="quiz">
-    <p>Име и Фамилия</p>
-    <input id="text" type="text" name="q1">
+<form class="quiz" id="quiz" name="quiz" action="/home">
+    <p>Фамилия:</p>
+    <input id="surname" type="text" name="surname" required>
+
     <p>Колко е 1+1?</p>
-    <input type="radio" name="gender" value="male">а) -1<br>
-    <input type="radio" name="gender" value="female">б) 0<br>
-    <input type="radio" name="gender" value="other">в) 3<br>
+    <input type="radio" name="q1" value="-2" required>а) -2<br>
+    <input type="radio" name="q1" value="2">б) 2<br>
+    <input type="radio" name="q1" value="3">в) 3<br>
+
+    <p>Колко е 5-3*2?</p>
+    <input type="radio" id="q2" name="q2" value="-1" required>а) -1<br>
+    <input type="radio" name="q2" value="4">б) 4<br>
+    <input type="radio" name="q2" value="7">в) 7<br>
+
+    <p>Колко е sin(90°)?</p>
+    <input type="radio" id="q3" name="q3" value="1" required>а) 1<br>
+    <input type="radio" name="q3" value="0">б) 0<br>
+    <input type="radio" name="q3" value="1/2">в) 1/2<br>
+
+    <p>Колко е sin^2α + sin^2β?</p>
+    <input type="radio" id="q4" name="q4" value="0" required>а) 0<br>
+    <input type="radio" name="q4" value="4">б) 4<br>
+    <input type="radio" name="q4" value="1">в) 1<br>
+
+    <p>Колко градуса е ъгълът на равнобедрен триъгълник?</p>
+    <input type="radio" id="q5 "name="q5" value="30°" required>а) 30°<br>
+    <input type="radio" name="q5" value="60°">б) 60°<br>
+    <input type="radio" name="q5" value="45°">в) 45°<br>
+
+    <p>Колко е 2-7?</p>
+    <input type="radio" id="q6" name="q6" value="9" required>а) 9<br>
+    <input type="radio" name="q6" value="|-5|">б) |-5|<br>
+    <input type="radio" name="q6" value="-5">в) -5<br>
+
+    <input id="button" type="submit" value="Submit" class="button" onclick="check();">
 </form>
 
 {% endblock %}
