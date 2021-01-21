@@ -6,6 +6,7 @@ function check() {
     var q4 = document.quiz.q4.value
     var q5 = document.quiz.q5.value
     var q6 = document.quiz.q6.value
+    var name = document.quiz.surname.value
 
     var correct = 0;
 
@@ -58,10 +59,10 @@ function check() {
     }
     else {
         if (correct > 2) {
-            alert("Оценката ви е: " + correct);;
+            alert("Г-н " + name + " оценката ви е: " + correct);;
         }
         else {
-            alert("Оценката ви е: 2");
+            alert("Г-н " + name + "оценката ви е: 2");
         }
     }
 
