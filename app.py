@@ -29,7 +29,7 @@ class Login(FlaskForm):
 
 @app.route('/')
 def index():
-    return redirect('login')
+    return redirect(url_for('login'))
 
 @app.route('/login', methods = ['POST', 'GET'])
 def login():
@@ -39,7 +39,7 @@ def login():
         if user:
             if check_password_hash(user.password, form.password.data):
                 login_user(user)
-                return redirect('home')
+                return redirect(url_for('success'))
 
     return render_template('login.html', form = form)
 
